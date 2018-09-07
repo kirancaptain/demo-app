@@ -1,0 +1,17 @@
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+
+  .table-container {
+    width: 50%;
+    mat-card {
+
+    }
+
+    table {
+      width: 100%;
+    }
+  }
+}

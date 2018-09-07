@@ -1,0 +1,14 @@
+<div>
+  <div class="img-div">
+    <!-- <img src="assets/airplane.jpg" height="200"> -->
+  </div>
+  <div class="container-upload">
+    <mat-card>
+      <button mat-raised-button (click)="uploadFile()" color="primary">
+        <mat-icon>cloud_upload</mat-icon>
+        Upload File
+      </button>
+    </mat-card>
+    <input type="file" #upload (change)="handleFileInput($event.target.files)" hidden>
+  </div>
+</div>
