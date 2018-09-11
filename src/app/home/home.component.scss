@@ -1,22 +1,52 @@
-
-
 .img-div {
+  height: 91.8vh;
+  overflow: hidden;
+
   img {
     width: 100%;
+    position: relative;
+    opacity: .7;
+  }
+
+  .title {
+    position: absolute;
+    left: 30%;
+    font-size: 35px;
+    color: #ffffff;
+    top: 6%;
   }
 }
 
-
-.container-upload{
-    display: flex;
-    height: 90vh;
-    justify-content: center;
-    align-items: center;
-
-    mat-card{
-      
-    }
-    mat-icon{
-
-    }
+.container-upload {
+  display: flex;
+  height: 91vh;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 8%;
+  left: 43%;
 }
+
+.table {
+  position: absolute;
+  top: 22%;
+  width: 100%;
+}
+
+.back {
+  position: absolute;
+  top: 16%;
+  left: 2%;
+}
+
+// mat-spinner {
+//   width: 100px;
+//   height: 100px;
+//   position: absolute;
+//   top: 50%;
+//   left: 45%;
+//   z-index: 1000;
+// }
+
+
+

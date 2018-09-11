@@ -10,6 +10,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FileUploadService } from './services/file-upload.service';
 import { PredictionTableComponent } from './prediction-table/prediction-table.component';
+import { NgCircleProgressModule } from 'ng-circle-progress';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +23,8 @@ import { PredictionTableComponent } from './prediction-table/prediction-table.co
     BrowserAnimationsModule,
     MaterialModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgCircleProgressModule.forRoot()
   ],
   providers: [FileUploadService],
   bootstrap: [AppComponent]

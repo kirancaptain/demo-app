@@ -16,4 +16,9 @@ export class FileUploadService {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' })
     });
   }
+
+
+  sampleGet() {
+    return this.httpClient.get('assets/file.json');
+  }
 }

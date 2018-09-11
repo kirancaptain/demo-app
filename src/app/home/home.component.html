@@ -1,14 +1,27 @@
 <div>
+
   <div class="img-div">
-    <!-- <img src="assets/airplane.jpg" height="200"> -->
+    <img src="assets/controls.jpg">
+    <button mat-raised-button color="primary" class="back" *ngIf="!showUpload" (click)="goBack()">
+      <mat-icon>keyboard_backspace</mat-icon>
+      Back
+    </button>
+    <span class="title"><b>
+        <h2>Predictive Maintenance</h2>
+      </b></span>
   </div>
   <div class="container-upload">
-    <mat-card>
-      <button mat-raised-button (click)="uploadFile()" color="primary">
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+    <mat-card *ngIf="showUpload">
+      <button mat-raised-button (click)="uploadFile()" color="primary" *ngIf="!showSpinner">
         <mat-icon>cloud_upload</mat-icon>
         Upload File
       </button>
+      <mat-spinner *ngIf="showSpinner"></mat-spinner>
     </mat-card>
-    <input type="file" #upload (change)="handleFileInput($event.target.files)" hidden>
+    <input type="file" #upload (change)="handleFileInput($event.target.files);" hidden>
+  </div>
+  <div class="table" *ngIf="!showUpload">
+    <app-prediction-table [tableData]="dataArr" [topFive]="dataArr1" [percentage]="percent"></app-prediction-table>
   </div>
 </div>
